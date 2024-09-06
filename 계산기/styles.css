@@ -1,0 +1,101 @@
+/* 기본 바디 스타일 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; 
+    font-family: Arial, sans-serif; 
+    transition: background-color 0.3s; 
+}
+
+body.dark-mode {
+    background-color: #333; /* 다크 모드 배경색 */
+    color: #fff; /* 다크 모드 텍스트 색상 */
+}
+
+/* 계산기 스타일 */
+.calculator {
+    background-color: #fff; /* 계산기 기본 배경색 */
+    border-radius: 10px; /* 모서리 둥글기 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    padding: 20px;
+    width: 300px; /* 계산기 너비 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    position: relative;
+    transition: background-color 0.3s; 
+}
+
+body.dark-mode .calculator {
+    background-color: #444; /* 다크 모드 계산기 배경색 */
+}
+
+/* 계산기 화면 스타일 */
+.display {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #f1f1f1; /* 화면 기본 배경색 */
+    text-align: right; /* 텍스트 오른쪽 정렬 */
+    padding: 10px;
+    font-size: 24px; /* 폰트 크기 */
+    margin: 0px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* 모서리 둥글기 */
+}
+
+body.dark-mode .display {
+    background-color: #666; /* 다크 모드 화면 배경색 */
+    color: #fff; /* 다크 모드 화면 텍스트 색상 */
+}
+
+/* 계산기 버튼 스타일 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; /* 버튼 사이 간격 */
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #f1f1f1; 
+    border: none;
+    border-radius: 5px; /* 모서리 둥글기 */
+    cursor: pointer; 
+    transition: background-color 0.2s; 
+}
+
+button:active {
+    background-color: #ccc; /* 버튼 클릭 시 배경색 */
+}
+
+body.dark-mode button {
+    background-color: #555; /* 다크 모드 버튼 배경색 */
+    color: #fff; /* 다크 모드 버튼 텍스트 색상 */
+}
+
+body.dark-mode button:active {
+    background-color: #777; /* 다크 모드 버튼 클릭 시 배경색 */
+}
+
+#mode-toggle {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    font-size: 12px; 
+    background-color: #f1f1f1; 
+    color: #000; 
+    border-radius: 5px; /* 모서리 둥글기 */
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.2s; 
+}
+
+body.dark-mode #mode-toggle {
+    background-color: #555; /* 다크 모드 버튼 배경색 */
+    color: #fff; /* 다크 모드 버튼 텍스트 색상 */
+}
